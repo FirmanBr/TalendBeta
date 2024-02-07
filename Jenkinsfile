@@ -11,6 +11,7 @@ pipeline {
                     agent { label 'ubuntu' }
                 }
             }
+		}	
 			
         stage('Checkout Repository') {
             steps {
