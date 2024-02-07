@@ -28,6 +28,16 @@ pipeline {
                 checkout scm
             }
         }
+		
+        stage('Execute Talend Testing') {
+            steps {
+                // Menjalankan file batch TalendTesting_run.bat
+                script {
+                    // Ganti path dengan lokasi aktual file batch
+                    bat 'TalendTesting\\TalendTesting_run.bat'
+                }
+            }
+        }		
 
 		        
     }	
