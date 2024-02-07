@@ -1,8 +1,5 @@
 pipeline {
-    agent {
-        // Menggunakan agent 'ubuntu'
-        label 'ubuntu'
-    }
+	agent any
     
     stages {
         stage('Checkout Repository') {
