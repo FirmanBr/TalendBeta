@@ -12,7 +12,16 @@ pipeline {
                 }
             }
 		}	
-			
+
+        stage('Check Ubuntu Version') {
+            steps {
+                // Mengeksekusi perintah untuk memeriksa versi Ubuntu
+                script {
+                    sh 'lsb_release -a'
+                }
+            }
+        }
+		
         stage('Checkout Repository') {
             steps {
                 checkout scm
