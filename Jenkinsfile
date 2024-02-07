@@ -38,7 +38,23 @@ pipeline {
                 }
             }
         }		
-
+		
+        stage('Unit Test') {
+            steps {
+                // Menjalankan unit test (ganti dengan perintah sesuai dengan framework Anda)
+            }
+        }
+        
+        stage('Integration Test') {
+            steps {
+                // Menjalankan integration test (ganti dengan perintah sesuai dengan framework Anda)
+            }
+        }
+        stage('Deployment') {
+            steps {
+                // Menjalankan Deployment (ganti dengan perintah sesuai dengan framework Anda)
+            }
+        }		
 		        
     }	
 }
