@@ -7,6 +7,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Set up Java') {
+            agent {
+                label 'ubuntu' // Menggunakan agent Ubuntu
+            }
+        }
 		        
     }	
 }
