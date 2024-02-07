@@ -5,19 +5,20 @@ pipeline {
 	
         stage('Setup') {
             steps {
-                // Menggunakan Ubuntu sebagai agent
+                // Menggunakan Windows sebagai agent
                 script {
-                    // Membuat label 'ubuntu' untuk agent Ubuntu
-                    agent { label 'ubuntu' }
+                    // Membuat label 'windows' untuk agent Windows
+                    agent { label 'windows' }
                 }
             }
-		}	
+        }
 
-        stage('Check Ubuntu Version') {
+        stage('Check Windows Version') {
             steps {
-                // Mengeksekusi perintah untuk memeriksa versi Ubuntu
+                // Mengeksekusi perintah untuk memeriksa versi Windows
                 script {
-                    sh 'lsb_release -a'
+                    // Menggunakan perintah untuk menampilkan versi Windows
+                    bat 'ver'
                 }
             }
         }
